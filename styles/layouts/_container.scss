@@ -28,18 +28,14 @@
   max-width: $br-content-medium;
 }
 
-@mixin narrow() {
+@mixin grid($size: wide) {
   display: grid;
-  $content-width: min(100% - $content-inline-margin * 2, $content-width-wide);
-  grid-template-columns: 1fr [content-start] $content-width [content-end] 1fr;
+  $max-width: map-get($content-widths, $size);
+  $width: min(100% - $content-inline-margin * 2, $max-width);
+  grid-template-columns: 1fr [content-start] $width [content-end] 1fr;
   margin-bottom: 4rem;
 
   & > * {
     grid-column: content;
   }
-}
-
-@mixin extra-narrow() {
-  @include narrow;
-  $content-width: min(100% - $content-inline-margin * 2, $content-width-small);
 }
