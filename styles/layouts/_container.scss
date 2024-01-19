@@ -38,3 +38,8 @@
     grid-column: content;
   }
 }
+
+@mixin extra-narrow() {
+  @include narrow;
+  $content-width: min(100% - $content-inline-margin * 2, $content-width-small);
+}

@@ -7,6 +7,7 @@ $br-buffer: 50px;
 // Content width
 $content-inline-margin: 1rem;
 $content-width-wide: calc($br-content-wide - $content-inline-margin * 2);
+$content-width-small: calc($br-content-small - $content-inline-margin * 2);
 
 // Borders
 $border-radius-default: 4px;
